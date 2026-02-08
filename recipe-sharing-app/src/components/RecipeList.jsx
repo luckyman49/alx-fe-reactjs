@@ -5,6 +5,7 @@ const RecipeList = () => {
   const recipes = useRecipeStore((state) =>
     state.filteredRecipes.length > 0 ? state.filteredRecipes : state.recipes
   );
+  const addFavorite = useRecipeStore((state) => state.addFavorite);
 
   return (
     <div>
@@ -15,6 +16,7 @@ const RecipeList = () => {
             <Link to={`/recipe/${recipe.id}`}>{recipe.title}</Link>
           </h3>
           <p>{recipe.description}</p>
+          <button onClick={() => addFavorite(recipe.id)}>Add to Favorites</button>
         </div>
       ))}
     </div>
