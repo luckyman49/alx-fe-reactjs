@@ -18,6 +18,7 @@ function App() {
             path="/"
             element={
               <>
+                <SearchBar />
                 <AddRecipeForm />
                 <RecipeList />
               </>
@@ -30,7 +31,6 @@ function App() {
   );
 }
 
-// Wrapper to extract recipeId from URL
 function RecipeDetailsWrapper() {
   const { id } = useParams();
   return <RecipeDetails recipeId={Number(id)} />;
