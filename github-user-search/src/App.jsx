@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Search from "./components/Search";
 function App() {
   const [count, setCount] = useState(0)
   const token = import.meta.env.VITE_APP_GITHUB_API_KEY;
@@ -12,6 +12,7 @@ function App() {
       <div>
         <h1>GitHub User Search App</h1>
         <p>Environment variable test: {token}</p>
+        <Search />
       </div>
 
       <div>
