@@ -3,8 +3,9 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-// ✅ Import your UserProfile component
-import UserProfile from "./components/UserProfile";
+// Import UserProfile here
+import UserProfile from "./components/UserProfile.jsx";
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,7 +22,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
 
-      {/* ✅ Show your UserProfile card here */}
+      {/* Show your UserProfile card */}
       <UserProfile />
 
       <div className="card">
