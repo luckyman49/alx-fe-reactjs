@@ -4,7 +4,7 @@ function AddRecipeForm() {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [steps, setSteps] = useState("");
-  const [errors, setErrors] = useState({}); // <-- required
+  const [errors, setErrors] = useState({});
 
   // Validation function
   const validate = () => {
@@ -25,7 +25,7 @@ function AddRecipeForm() {
       newErrors.steps = "Preparation steps are required.";
     }
 
-    setErrors(newErrors); // <-- required
+    setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
@@ -53,7 +53,7 @@ function AddRecipeForm() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg"
+        className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg md:max-w-2xl"  {/* <-- md breakpoint */}
       >
         <h1 className="text-2xl font-bold text-green-600 mb-6">
           Add New Recipe
@@ -103,7 +103,7 @@ function AddRecipeForm() {
         {/* Submit */}
         <button
           type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 w-full"
+          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 w-full md:w-auto"  {/* <-- md breakpoint */}
         >
           Submit Recipe
         </button>
